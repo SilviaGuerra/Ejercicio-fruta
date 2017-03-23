@@ -4,21 +4,31 @@
     <meta charset ="utf-8"/>
     <title>Ejercicio Fruta</title>
   </head>
-  <body>
-    <h1 style="background-color:#00CC75; text-align:center; font-size:40px">Lista de frut🍓s 🍍🍎🍉🍇</h1>
-    <img src="frutitas.png" width="500" height="300" align="center"/>
-    <p><b>Catálogo</b></p>
-    <ol>
-      <li>Manzana</li>
-      <li>Pera</li>
-      <li>Piña</li>
-      <li>Cereza</li>
-      <li>Naranja</li>
-      <li id="nuevaFruta"></li>
-    </ol>
-    <input type="text" id="fruta">
-    <button type="button" onclick="agregarFruta ()">Agregar</button>
-    <script ="javascript.js"></script>
-
+  <body background="fruits-pattern.jpg">
+    <table align="center" style="background-color:#FFFFFF" width=80%>
+      <tr>
+        <td>
+          <h1 style="background-color:#00CC75; text-align:center; font-size:40px">Lista de frut🍓s 🍍🍎🍉🍇</h1>
+          <img src="frutitas.png" width="500" height="300" align="center"/>
+          <p><b>Catálogo</b></p>
+          <ol id="lista">
+            <li>Fresa</li>
+            <li>Uva</li>
+          </ol>
+          <label for=""></label>
+          <input type="text" id="nuevaFruta" value="">
+          <button type="button" onclick="agregarCosa()">Agregar</button>
+          <script>
+          function agregarCosa(){
+            var entradaFruta = document.getElementById("nuevaFruta").value;//la nva fruta agregada se guarda en la var
+            var nuevoElemento = document.createElement("li"); //se crea un nvo elemento li vacio
+            nuevoElemento.innerHTML = entradaFruta; //la fruta ingresada se agrega a li
+            document.getElementById("lista").appendChild(nuevoElemento); //se llama a la lista hecha y se agrega la nva fruta
+            document.getElementById("nuevaFruta").value = ""; //se imprime la nueva fruta
+          }
+          </script>
+        </td>
+      </tr>
+    </table>
   </body>
 </html>
