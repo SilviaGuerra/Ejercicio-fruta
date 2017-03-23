@@ -1,8 +1,8 @@
-function agregarFruta (){
-  var catalogo = ["Manzana", "Pera", "Piña", "Cereza", "Naranja"];
-  var fruta = document.getElementById("fruta").value;
-  var nuevaFruta = document.getElementById("nuevaFruta");
-  if(nuevoElemento == true){
-    catalogo.push(fruta);
-  }
+function agregarCosa(){
+  var nuevoValorEntradaTexto = document.getElementById("valorNuevo");
+  var nuevoElemento = document.createElement("li");
+  nuevoElemento.innerHTML = nuevoValorEntradaTexto;
+  document.getElementById("lista").appendChild(nuevoElemento);
+  document.getElementById("valorNuevoItem").value = ""
 }
+agregarCosa();
